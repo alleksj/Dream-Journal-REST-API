@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "9fc08b91-1339-42f5-b92f-6a86a9372dbc",
+		"name": "DreamJournalPostman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"UPDATED Title of dream\",\n    \"description\": \"3Some description\",\n    \"type\": \"happy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				},
+				"description": "Request to the homepage."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/get-all-dream-types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/get-all-dream-types",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-all-dream-types"
+					]
+				},
+				"description": "Implement “Get all dream types” endpoint which returns an array of strings (values of the enum)\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/create-dream",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"First dream\",\n    \"description\": \"Description of the first dream\",\n    \"type\": \"happy\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/create-dream",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"create-dream"
+					]
+				},
+				"description": "Add JSON:\n{\n    \"title\": \"some title\",\n    \"description\": \"some description\",\n    \"type\": \"happy\"\n}\nto add an item to the database "
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/update-dream/:id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"type\": \"sad\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-dream/6054ad84abc4e607b888b786",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-dream",
+						"6054ad84abc4e607b888b786"
+					]
+				},
+				"description": "Updates an item in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/display-dreams",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/display-dreams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"display-dreams"
+					]
+				},
+				"description": "Displays items in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/delete-dream/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete-dream/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-dream",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				},
+				"description": "Deletes item from a database"
+			},
+			"response": []
+		}
+	]
+}
